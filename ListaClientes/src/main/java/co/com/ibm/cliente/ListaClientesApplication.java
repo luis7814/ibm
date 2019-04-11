@@ -1,0 +1,13 @@
+package co.com.ibm.cliente;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ListaClientesApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ListaClientesApplication.class, args);
+	}
+
+}

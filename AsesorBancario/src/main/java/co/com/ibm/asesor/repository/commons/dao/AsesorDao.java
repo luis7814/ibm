@@ -1,0 +1,48 @@
+package co.com.ibm.asesor.repository.commons.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import co.com.ibm.asesor.repository.commons.entities.IbmAsesor;
+import co.com.ibm.asesor.repository.shared.repository.IAsesorRepository;
+
+@Repository
+public class AsesorDao implements IAsesorDao{
+
+	
+	@Autowired
+	private IAsesorRepository iAsesorRepository;
+	
+	private List<IbmAsesor> ibmAsesors;
+	private IbmAsesor ibmAsesor;
+	
+	@Override
+	public List<IbmAsesor> listarAsesores() throws Exception {
+		// TODO Auto-generated method stub
+		
+		ibmAsesors = iAsesorRepository.findAll();
+		
+		return ibmAsesors;
+	}
+
+	@Override
+	public IbmAsesor registrarAsesor(IbmAsesor ibmAsesor) throws Exception {
+		// TODO Auto-generated method stub
+		
+		ibmAsesor = iAsesorRepository.saveAndFlush(ibmAsesor);
+		
+		return null;
+	}
+
+	@Override
+	public IbmAsesor consultarAsesor(Long asesorId) throws Exception {
+		// TODO Auto-generated method stub
+		
+		ibmAsesor = iAsesorRepository.findByAsesorId(asesorId);
+		
+		return ibmAsesor;
+	}
+
+}
