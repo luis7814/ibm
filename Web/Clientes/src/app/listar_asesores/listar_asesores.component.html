@@ -1,0 +1,39 @@
+<div class="container custom-container-2">
+
+  <!-- Show it when there is no asesor -->
+  <div class="no-data text-center" *ngIf="Asesor.length == 0">
+    <p>There is no asesor added yet!</p>
+    <button class="btn btn-outline-primary" routerLink="/crear_asesor">Registrar Asesor</button>
+  </div>
+
+  <!-- Asesors list table, it hides when there is no asesor -->
+  <div *ngIf="Asesor.length !== 0">
+    <h3 class="mb-3 text-center">Lista de Asesores</h3>
+
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Asesor Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asesor of Asesor">
+            <td>{{asesor.asesorId}}</td>
+            <td>{{asesor.asesorNombre}}</td>
+            <td>{{asesor.asesorEspecialidad}}</td>
+            <td>
+              <span class="edit" routerLink="/editar_asesor/{{asesor.asesorId}}">Editar</span>
+              <span class="delete" (click)="deleteAsesor(asesor.asesorId)">Eliminar</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
