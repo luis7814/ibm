@@ -11,6 +11,7 @@ public class Cliente {
 	private String clienteTelefono;
 	private String cantidadTarjetas;
 	private List<Tarjeta> tarjetas;
+	private String mensajeResultado;
 	
 	public Long getClienteId() {
 		return clienteId;
@@ -66,6 +67,14 @@ public class Cliente {
 	
 	public void setTarjetas(List<Tarjeta> tarjetas) {
 		this.tarjetas = tarjetas;
+	}
+
+	public String getMensajeResultado() {
+		return mensajeResultado;
+	}
+
+	public void setMensajeResultado(String mensajeResultado) {
+		this.mensajeResultado = mensajeResultado;
 	}
 	
 	

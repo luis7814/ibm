@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import co.com.ibm.historial.core.commons.entities.Cliente;
 import co.com.ibm.historial.core.shared.services.IClienteService;
 
+/*
+ * @Clase : ClienteController.java
+ * @Comentario : Clase Controller que expone los servicios de los clientes
+ * 
+ */
+
 @RestController
 public class ClienteController {
 	

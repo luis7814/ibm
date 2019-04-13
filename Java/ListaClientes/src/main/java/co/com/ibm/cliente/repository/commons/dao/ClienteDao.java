@@ -25,4 +25,22 @@ public class ClienteDao implements IClienteDao{
 		return ibmClientes;
 	}
 
+	@Override
+	public IbmCliente registrarCliente(IbmCliente ibmCliente) throws Exception {
+		// TODO Auto-generated method stub
+		
+		ibmClienteRepository.saveAndFlush(ibmCliente);
+		
+		return null;
+	}
+	
+	@Override
+	public IbmCliente consultarCliente(Long clienteId) throws Exception {
+		// TODO Auto-generated method stub
+		
+		IbmCliente ibmCliente;
+		ibmCliente = ibmClienteRepository.findByClienteId(clienteId);
+		
+		return ibmCliente;
+	}
 }

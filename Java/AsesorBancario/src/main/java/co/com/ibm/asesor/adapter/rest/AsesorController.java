@@ -14,18 +14,26 @@ import org.springframework.web.bind.annotation.RestController;
 import co.com.ibm.asesor.core.commons.entities.Asesor;
 import co.com.ibm.asesor.core.shared.services.IAsesorService;
 
+/*
+ * @Clase : AsesorController.java
+ * @Comentario : Clase Controller que expone los servicios de asesores
+ * 
+ */
+
 @RestController
 public class AsesorController {
 
 	@Autowired
 	private IAsesorService iAsesorService;
 	
-	private List<Asesor> asesors;
-	private Asesor asesor;
+	public AsesorController() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	@GetMapping("/asesores")
 	public ResponseEntity<List<Asesor>> listarAsesores(){
 		
+		List<Asesor> asesors;
 		asesors = iAsesorService.listarAsesores();
 		
 		return new ResponseEntity<List<Asesor>>(asesors, HttpStatus.ACCEPTED);
@@ -35,6 +43,7 @@ public class AsesorController {
 	@GetMapping("/asesor")
 	public ResponseEntity<Asesor> consultarAsesor(@RequestParam("asesorId") String asesorId){
 		
+		Asesor asesor;
 		asesor = iAsesorService.consultarAsesor(asesorId);
 		
 		return new ResponseEntity<Asesor>(asesor, HttpStatus.ACCEPTED);

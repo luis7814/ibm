@@ -6,6 +6,8 @@ import co.com.ibm.cliente.repository.commons.entities.IbmCliente;
 
 public interface IClienteDao {
 
-	public List<IbmCliente> listarClientes() throws Exception;
+	List<IbmCliente> listarClientes() throws Exception;
+	IbmCliente registrarCliente(IbmCliente ibmCliente) throws Exception;
+	IbmCliente consultarCliente(Long clienteId) throws Exception;
 	
 }

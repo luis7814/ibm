@@ -6,6 +6,12 @@ import org.springframework.stereotype.Repository;
 import co.com.ibm.historial.repository.commons.entities.IbmCliente;
 import co.com.ibm.historial.repository.shared.repository.IIbmClienteRepository;
 
+/*
+ * @Clase : ClienteDao.java
+ * @Comentario : Clase Dao que consulta la informacion de clientes para base de datos
+ * 
+ */
+
 @Repository
 public class ClienteDao implements IClienteDao{
 

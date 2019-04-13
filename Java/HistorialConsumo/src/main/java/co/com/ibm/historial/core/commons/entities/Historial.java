@@ -6,6 +6,7 @@ public class Historial {
 	private String historialFechaConsumo;
 	private String historialDescripcionConsumo;
 	private Long historialMonto;
+	private String mensajeResultado;
 	
 	public Long getHistorialId() {
 		return historialId;
@@ -37,6 +38,14 @@ public class Historial {
 	
 	public void setHistorialMonto(Long historialMonto) {
 		this.historialMonto = historialMonto;
+	}
+
+	public String getMensajeResultado() {
+		return mensajeResultado;
+	}
+
+	public void setMensajeResultado(String mensajeResultado) {
+		this.mensajeResultado = mensajeResultado;
 	}
 	
 	

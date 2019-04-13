@@ -17,6 +17,12 @@ import co.com.ibm.historial.repository.commons.entities.IbmCliente;
 import co.com.ibm.historial.repository.commons.entities.IbmHistorial;
 import co.com.ibm.historial.repository.commons.entities.IbmTarjeta;
 
+/*
+ * @Clase : ClienteService.java
+ * @Comentario : Clase Logica que consulta y valida la informacion de los clientes
+ * 
+ */
+
 @Service
 public class ClienteService implements IClienteService{
 
@@ -31,7 +37,6 @@ public class ClienteService implements IClienteService{
 	
 	private List<IbmHistorial> ibmHistorials;
 	
-	private List<Cliente> clientes;
 	private List<Historial> historials;
 	private List<Tarjeta> tarjetas;
 	
@@ -50,14 +55,13 @@ public class ClienteService implements IClienteService{
 		
 		try {
 			
-			clientes = new ArrayList<>();
 			tarjetas = new ArrayList<>();
 			
 			ibmCliente = iClienteDao.consultarConsumoCliente(Long.parseLong(clienteId));
 			
 			if(ibmCliente != null) {
 				
-				cliente = new Cliente();
+				cliente = new Cliente();	
 				cliente.setClienteId(ibmCliente.getClienteId());
 				cliente.setClienteNombre(ibmCliente.getClienteNombre());
 				cliente.setClienteTelefono(ibmCliente.getClienteTelefono());
@@ -92,16 +96,18 @@ public class ClienteService implements IClienteService{
 						
 						tarjeta.setHistorials(historials);
 						tarjetas.add(tarjeta);
-						
-						cliente.setTarjetas(tarjetas);
-						clientes.add(cliente);
-						
 					}
+				}else{
+					tarjeta = new Tarjeta();
+					tarjeta.setMensajeResultado("El cliente no tiene tarjetas!.");
+					tarjetas.add(tarjeta);
 				}
+			}else {
+				cliente = new Cliente();
+				cliente.setMensajeResultado("No existe el Cliente!.");
 			}
 			
-						
-			
+			cliente.setTarjetas(tarjetas);
 			
 		}catch (Exception e) {
 			// TODO: handle exception

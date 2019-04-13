@@ -11,6 +11,12 @@ import co.com.ibm.historial.core.commons.entities.Historial;
 import co.com.ibm.historial.repository.commons.dao.IHistorialDao;
 import co.com.ibm.historial.repository.commons.entities.IbmHistorial;
 
+/*
+ * @Clase : HistorialService.java
+ * @Comentario : Clase Logica que consulta y valida la informacion del historial de clientes
+ * 
+ */
+
 @Service
 public class HistorialService implements IHistorialService{
 

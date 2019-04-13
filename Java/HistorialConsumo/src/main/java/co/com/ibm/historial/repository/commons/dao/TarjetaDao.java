@@ -6,6 +6,12 @@ import org.springframework.stereotype.Repository;
 import co.com.ibm.historial.repository.commons.entities.IbmTarjeta;
 import co.com.ibm.historial.repository.shared.repository.IIbmTarjetaRepository;
 
+/*
+ * @Clase : TarjetaDao.java
+ * @Comentario : Clase Dao que consulta la informacion de la tarjeta de una persona en base de datos
+ * 
+ */
+
 @Repository
 public class TarjetaDao implements ITarjetaDao{
 

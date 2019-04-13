@@ -9,6 +9,7 @@ public class Tarjeta {
 	private String tarjetaCcv;
 	private String tarjetaTipo;
 	private List<Historial> historials;
+	private String mensajeResultado;
 	
 	public Long getTarjetaId() {
 		return tarjetaId;
@@ -48,6 +49,14 @@ public class Tarjeta {
 
 	public void setHistorials(List<Historial> historials) {
 		this.historials = historials;
+	}
+
+	public String getMensajeResultado() {
+		return mensajeResultado;
+	}
+
+	public void setMensajeResultado(String mensajeResultado) {
+		this.mensajeResultado = mensajeResultado;
 	}
 	
 	
