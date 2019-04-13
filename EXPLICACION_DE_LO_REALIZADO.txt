@@ -8,8 +8,10 @@ Los componentes Java son tres:
 - Información del Cliente.
 - Asesores.
 
-Las aplicaciones se realizaron en springboot y exportaron en jar para ejecutarlo en la consola del Amazon Web Service.
+Las aplicaciones se realizaron en springboot y exportaron en jar para ejecutarlo en la consola del Amazon Web Service. (Las aplicaciones son autocontenidas, se levantan con TOMCAT)
 Las aplicaciones se encuentra en una instancia linux y la base de datos que es Postgres también se encuentra en el Amazon Web Service.
+
+En el archivo https://github.com/luis7814/ibm/blob/master/Java/AsesorBancario/src/main/resources/application.properties, se encuentra los datos de conexión, en caso querer revisar el modelo de datos
 
 A continuación, algunas url para su conexión.
 
