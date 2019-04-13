@@ -1,0 +1,23 @@
+<div class="container custom-container">
+  <div class="col-md-12">
+    
+    <h3 class="mb-3 text-center">Actualizar Asesor</h3>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="asesorData.id" class="form-control" placeholder="Id">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="asesorData.asesorNombre" class="form-control" placeholder="Nombre">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="asesorData.asesorEspecialidad" class="form-control" placeholder="Especialidad">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="updateAsesor()">Actualizar Asesor</button>
+    </div>
+    
+  </div>
+</div>

@@ -33,7 +33,7 @@ public class ClienteController {
 	@GetMapping("/cliente")
 	public ResponseEntity<Cliente> consultarClientes(@RequestParam("clienteId") String clienteId){
 		
-		Cliente cliente;
+		Cliente cliente = new Cliente();
 		
 		cliente = iClienteService.consultarCliente(clienteId);
 		

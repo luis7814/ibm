@@ -1,0 +1,36 @@
+
+
+La aplicación web se debe levantar desde la máquina local.
+
+Los componentes Java son tres:
+
+- Historial de consumo del Cliente.
+- Información del Cliente.
+- Asesores.
+
+Las aplicaciones se realizaron en springboot y exportaron en jar para ejecutarlo en la consola del Amazon Web Service.
+Las aplicaciones se encuentra en una instancia linux y la base de datos que es Postgres también se encuentra en el Amazon Web Service.
+
+A continuación, algunas url para su conexión.
+
+
+Historial Persona por tarjeta
+	http://ec2-18-223-22-248.us-east-2.compute.amazonaws.com:8085/cliente?clienteId=1&tarjetaId=1
+
+Lista de Clientes con tarjetas
+	http://ec2-18-223-22-248.us-east-2.compute.amazonaws.com:8086/clientes?clienteId=2
+	http://ec2-18-223-22-248.us-east-2.compute.amazonaws.com:8086/clientes
+
+Lista Asesores
+	http://ec2-18-223-22-248.us-east-2.compute.amazonaws.com:8084/asesores
+
+Gestion de Asesores
+	http://ec2-18-223-22-248.us-east-2.compute.amazonaws.com:8084/asesores
+	http://ec2-18-223-22-248.us-east-2.compute.amazonaws.com:8084/asesor?asesorId=1
+
+	http://ec2-18-223-22-248.us-east-2.compute.amazonaws.com:8084/asesor
+		{
+			"asesorId": 6,
+			"asesorNombre": "Asesor 6",
+			"asesorEspecialidad": "Especialidad 6"
+		}
